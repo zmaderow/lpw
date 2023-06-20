@@ -1,17 +1,21 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    transition: 0.4s;
 }
+
+:root {
+    --body-bg: #ffff;
+    --body-color: black;
+    --theme-color: lightseagreen;
+}
+
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #ffff;
-    /* background-image: url("../img/indexBackground.png");
-    background-size: cover; */
-    /* filter: invert(1); */
+    background-color: var(--body-bg);
+    color: var(--body-color);
 }
 
 nav {
@@ -19,19 +23,19 @@ nav {
     justify-content: space-between;
     margin: 1rem 2rem;
     padding: 1rem;
-    background-color: lightseagreen;
+    background-color: var(--theme-color);
     align-items: center;
-    color: #ffff;
+    color: var(--body-color);
     border-radius: 20px;
     height: 2.7rem;
 }
 
 nav .button {
-    background-color: #ffff;
+    background-color: var(--body-bg);
     padding: 0.8rem;
     border-radius: 17px;
     text-decoration: none;
-    color: #000000;
+    color: var(--body-color);
     transition: 0.6s;
     position: relative;
 }
@@ -70,11 +74,11 @@ nav .button {
 
 
 section .button {
-    background-color: lightseagreen;
+    background-color: var(--theme-color);
     padding: 0.8rem;
     border-radius: 17px;
     text-decoration: none;
-    color: #ffff;
+    color: var(--body-bg);
     display: block;
     width: fit-content;
     text-align: center;
@@ -94,9 +98,9 @@ section .button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: black;
-    border: 2px solid #000000;
-    box-shadow: 0.3rem 0.3rem lightseagreen;
+    color: var(--body-color);
+    border: 2px solid var(--body-color);
+    box-shadow: 0.3rem 0.3rem var(--theme-color);
     border-radius: 30px;
     margin: 3rem;
     padding: 4rem;
@@ -124,7 +128,7 @@ footer {
     padding: 2rem 0;
     flex-wrap: wrap;
     width: 100%;
-    background-color: lightseagreen;
+    background-color: var(--theme-color);
 }
 
 .devs {
@@ -159,11 +163,11 @@ footer {
     align-items: center;
     flex-direction: column;
     width: 30%;
-    border: 2px solid #000000;
+    border: 2px solid var(--body-color);
     border-radius: 2rem;
     margin: 2rem;
     padding: 1rem;
-    box-shadow: 0.3rem 0.3rem lightseagreen;
+    box-shadow: 0.3rem 0.3rem var(--theme-color);
     transition: 0.7s;
 }
 
@@ -178,7 +182,7 @@ footer {
 }
 
 hr {
-    border: 2px solid #000000;
+    border: 2px solid var(--body-color);
     margin: 3rem;
     border-radius: 5rem;
 }
@@ -189,14 +193,19 @@ hr {
     margin: 1rem auto;
 }
 
-#turnMode {
-    display: flex;
-    position: fixed;
-    width: 3%;
-    justify-content: center;
-}
-
 h1 a {
     text-decoration: none;
-    color: #ffff;
+    color: var(--body-bg);
+}
+
+.mode {
+    border: none;
+    margin-right: 1rem;
+    cursor: pointer;
+    background-color: var(--theme-color);
+    padding: 0.8rem;
+    text-decoration: none;
+    color: var(--body-bg);
+    transition: 0.6s;
+    position: relative;
 }
