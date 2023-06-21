@@ -194,3 +194,14 @@ a {
     text-decoration: none;
     color: var(--body-color);
 }
+
+
+footer ul {
+    font-weight: bold;
+}
+
+footer ul li a {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--body-color);
+}
